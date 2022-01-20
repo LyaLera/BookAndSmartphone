@@ -99,7 +99,7 @@ class ProductManagerTest {
         manager.searchBy(zero.getName());
 
         Product[] actual = manager.searchBy(zero.getName());
-        Product[] expected = new Product[]{};
+        Product[] expected = new Product[]{zero};
         assertArrayEquals(expected, actual);
     }
 }
