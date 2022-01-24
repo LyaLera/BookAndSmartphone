@@ -18,11 +18,5 @@ public class Product {
     public String getName() {
         return name;
     }
-
-    public boolean matches(String search) {
-        if (getName().contains(search)) {
-            return true;
-        }
-        return false;
-    }
 }
+
