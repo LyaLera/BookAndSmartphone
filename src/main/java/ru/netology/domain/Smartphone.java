@@ -12,6 +12,7 @@ public class Smartphone extends Product {
         return manufacturer;
     }
 
+    @Override
     public boolean matches(String search) {
         return super.matches(search) || getManufacturer().contains(search);
     }
