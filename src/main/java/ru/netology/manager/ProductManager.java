@@ -1,9 +1,9 @@
 package ru.netology.manager;
 
-import ru.netology.domain.Book;
 import ru.netology.domain.Product;
-import ru.netology.domain.Smartphone;
 import ru.netology.repository.ProductRepository;
+
+import java.util.function.BooleanSupplier;
 
 public class ProductManager {
     private ProductRepository repository;

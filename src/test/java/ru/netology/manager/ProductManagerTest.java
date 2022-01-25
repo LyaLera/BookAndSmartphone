@@ -88,4 +88,46 @@ class ProductManagerTest {
         Product[] expected = new Product[]{number2};
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void shouldCheckIfMatchesBookByName() {
+
+        assertTrue(first.matches(number4.getName()));
+    }
+
+    @Test
+    public void shouldCheckIfMatchesSmartphoneByName() {
+
+        assertTrue(number1.matches(number2.getName()));
+    }
+
+    @Test
+    public void shouldCheckIfMatchesBookByAuthor() {
+
+        assertTrue(third.matches(third.getAuthor()));
+    }
+
+    @Test
+    public void shouldCheckIfMatchesSmartphoneByManufacturer() {
+
+        assertTrue(number4.matches(number4.getManufacturer()));
+    }
+
+    @Test
+    public void shouldCheckIfNotMatchesBookByAuthor() {
+
+        assertFalse(third.matches(second.getAuthor()));
+    }
+
+    @Test
+    public void shouldCheckIfNotMatchesSmartphoneByManufacture() {
+
+        assertFalse(number4.matches(number2.getManufacturer()));
+    }
+
+    @Test
+    public void shouldCheckIfNotMatchesBookByName() {
+
+        assertFalse(first.matches(second.getName()));
+    }
 }
